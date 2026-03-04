@@ -19,7 +19,8 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://update-page-nu.vercel.app",
+   
+      "https://update-phonepe-server.vercel.app",
     ],
     credentials: true,
   })
@@ -27,6 +28,8 @@ app.use(
 
 // ✅ MongoDB
 connectDB();
+
+
 
 // =======================
 // ✅ Register API
