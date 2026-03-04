@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Loader2, CheckCircle2, AlertCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-const AUTH_AP = import.meta.env.VITE_AUTH_API || "http://localhost:8000";
+const AUTH_AP = import.meta.env.VITE_AUTH_API || "http://localhost:5000";
 
 const Form = () => {
   const [role, setRole] = useState("");
