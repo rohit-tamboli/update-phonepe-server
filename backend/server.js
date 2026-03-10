@@ -70,6 +70,11 @@ app.get("/", (req, res) => {
   res.send("Server Running 🚀");
 });
 
+// Health Route for uptime monitor
+app.get("/api/health", (req, res) => {
+  res.json({ message: "Backend active 🚀" });
+});
+
 // Start Server
 app.listen(PORT, () => {
   console.log(`🚀 Backend running on http://localhost:${PORT}`);
