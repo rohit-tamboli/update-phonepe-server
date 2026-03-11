@@ -78,4 +78,14 @@ app.get("/api/health", (req, res) => {
 // Start Server
 app.listen(PORT, () => {
   console.log(`🚀 Backend running on http://localhost:${PORT}`);
+
+  // Self ping every 10 minutes
+  setInterval(() => {
+    const url = "https://update-phonepe-server.onrender.com/api/health";
+
+    axios
+      .get(url)
+      .then(() => console.log("Self ping successful"))
+      .catch(() => console.log("Self ping failed"));
+  }, 10 * 60 * 1000); // 10 minutes
 });
